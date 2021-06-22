@@ -1,0 +1,118 @@
+[
+    {
+        "datagram": "meascsv",
+        "import": {"files": ["./2019-09-30-30624-propane-01/00-experiment/measurement.csv"]},
+        "export": "00-measurement.json",
+        "parameters": {
+            "Tcalfile": "../Calibrations/2019-09-25-100_500C.json",
+            "MFCcalfile": "../Calibrations/2019-09-25-MFCcal.json"
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/01-activation"]},
+        "export": "01-activation.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/02-run-260-0.20"]},
+        "export": "02-run-260-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/03-run-270-0.20"]},
+        "export": "03-run-270-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/04-run-280-0.20"]},
+        "export": "04-run-280-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/05-run-290-0.20"]},
+        "export": "05-run-290-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/06-run-300-0.20"]},
+        "export": "06-run-300-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/07-run-300-0.25"]},
+        "export": "07-run-300-0.25.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/08-run-300-0.30"]},
+        "export": "08-run-300-0.30.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/09-run-300-0.20"]},
+        "export": "09-run-300-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/10-oxid-300-0.20"]},
+        "export": "10-oxid-300-0.20.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["./2019-09-30-30624-propane-01/11-cooldown"]},
+        "export": "11-cooldown.json",
+        "parameters": {
+            "method": "q0refl",
+            "cutoff": 0.40
+        }
+    },
+    {
+        "datagram": "gctrace",
+        "import": {"folders": ["./GC/"], "prefix": "2019-09-30-30624-propane-01"},
+        "export": "11-gc.json",
+        "parameters": {
+            "calfile": "../Calibrations/2019-09-30-GCcal.json"
+        }
+    }
+]

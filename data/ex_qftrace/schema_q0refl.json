@@ -1,0 +1,42 @@
+[
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["01-inert"]},
+        "export": "01-inert.json",
+        "parameters": {
+            "method": "q0refl"
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["06-feed-1000-TR"]},
+        "export": "06-feed-1000-TR.json",
+        "parameters": {
+            "method": "q0refl"
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["07-feed-1000-25"]},
+        "export": "06-feed-1000-25.json",
+        "parameters": {
+            "method": "q0refl"
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["08-feed-1000-50"]},
+        "export": "08-feed-1000-50.json",
+        "parameters": {
+            "method": "q0refl"
+        }
+    },
+    {
+        "datagram": "qftrace",
+        "import": {"folders": ["09-feed-1000-TR"]},
+        "export": "09-feed-1000-TR.json",
+        "parameters": {
+            "method": "q0refl"
+        }
+    }
+]
