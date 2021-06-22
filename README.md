@@ -4,6 +4,10 @@
 Authors: **Peter Kraus**, Elisabeth H. Wolf, Charlotte Prinz, Giulia Bellini, Annette Trunschke, Robert Schlögl
 Date: 2021-06-22
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5011202.svg)](https://doi.org/10.5281/zenodo.5011202) [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/zenodo/10.5281/zenodo.5011202/?filepath=index.ipynb)
+
+
+
 ## Contents:
 
 - `data`: data required to reproduce figures in the paper
