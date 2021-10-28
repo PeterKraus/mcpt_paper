@@ -116,16 +116,36 @@
 \beginsupplement
 
 \section*{Table of contents}
+\paragraph{Examples of log files:}
 \begin{enumerate}
 	\item Excerpt from an \emph{instrument log} file. \hfill p.~S2
     \item Excerpt from a \emph{VNA log} file. \hfill p.~S3
+\end{enumerate}
+
+\paragraph{Tabulated summary of the catalytic data:}
+\begin{enumerate}
+    \setcounter{enumi}{2}
 	\item Summary of the MCPT data for samples activated in \ce{C3}-oxidation, studied with the \emph{Handbook} protocol. The full archive, including \emph{datagrams}, \emph{schema} files, \emph{parameter files}, and all raw data, is available at DOI:~\href{https://doi.org/10.5281/zenodo.5008960}{10.5281/zenodo.5008960}  \hfill p.~S4
     \item Summary of the MCPT data for other samples studied with the \emph{Handbook} protocol. The full archive, including \emph{datagrams}, \emph{schema} files, \emph{parameter files}, and all raw data, is available at DOI:~\href{https://doi.org/10.5281/zenodo.5010992}{10.5281/zenodo.5010992}  \hfill p.~S4
     \item Summary of the MCPT data for samples studied with the perovskite protocol. The full archive, including \emph{datagrams}, \emph{schema} files, \emph{parameter files}, and all raw data, is available at DOI:~\href{https://doi.org/10.5281/zenodo.4980210}{10.5281/zenodo.4980210} \hfill p.~S5
-    \item Piping and instrumentation diagram of the MCPT instrument \hfill p.~S6
-	\item Technical diagram of the MCPT dewar \hfill p.~S7
-	\item Technical diagram of a MCPT reactor \hfill p.~S8
-	\item Illustration of the MCPT dewar/reactor assembly \hfill p.~S9
+\end{enumerate}
+
+\paragraph{Overview of the MCPT instrument:}
+\begin{enumerate}
+    \setcounter{enumi}{5}
+    %\item Photos of the MCPT set-up \hfill p.~S7
+    \item Simplified block diagram of the MCPT instrument \hfill p.~S7
+    \item A list of key instrument components \hfill p.~S7
+    \item Piping and instrumentation diagram of the MCPT instrument \hfill p.~S8
+\end{enumerate}
+
+\paragraph{Detailed description of instrument components:}
+\begin{enumerate}
+    \setcounter{enumi}{8}
+	\item Microwave cavities \hfill p.~S9
+	\item Custom glassware \hfill p.~S10
+	\item Temperature controller \hfill p.~S14
+    \item Transmission line \hfill p.~S16
 \end{enumerate}
 
 Additional supplemental files and archives in computer-readable form are available on Zenodo, see DOI: \href{https://doi.org/10.5281/zenodo.5011202}{10.5281/zenodo.5011202}. An executable version of this archive is available on \href{https://mybinder.org/v2/zenodo/10.5281/zenodo.5011202/?filepath=index.ipynb}{Binder}.
@@ -230,9 +250,134 @@ Additional supplemental files and archives in computer-readable form are availab
 \end{landscape}
 
 \clearpage
-\includepdf[pages=1, landscape=True]{p+id_3.pdf}
-\includepdf[pages=1, landscape=True]{dewar.pdf}
-\includepdf[pages=2, landscape=True]{dewar+reactor.pdf}
-\includepdf[pages=3, landscape=True]{dewar+reactor.pdf}
+% \begin{figure}[p]
+% \paragraph{Overview, diagrams and equipment list for the MCPT instrument \vspace{1em}}
+% \begin{center}
+% \includegraphics[width=0.8\linewidth]{IMG_20201130_134337.jpg}
+% \caption{An overview of the MCPT set-up (reactor assembly is removed). The PC running the automation software on front left; the cavity assembly on back right of the photo. Gas switching valves mounted on the upper left edge of the rack.}
+% \end{center}
+% \end{figure}
+% 
+% \begin{figure}[p]
+% \begin{center}
+% \includegraphics[width=0.8\linewidth]{IMG_20210819_184428.jpg}
+% \caption{Frontal view the MCPT set-up. The top shelf includes the temperature controller, vacuum gauge read-out, the flow meter control unit, and read-outs for heating wires. The middle shelf contains the network analyzer, and temperature regulators of the heating wires. On the bottom shelf is the gas chromatograph, the Poly-Arc reactor and its control unit, a Julabo pump for the coolant of the Peltier elements, and the Pfeiffer vacuum pump.}
+% \end{center}
+% \end{figure}
+
+\begin{figure}[p]
+\paragraph{Diagrams and equipment list for the MCPT instrument \vspace{1em}}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{block_diagram.png}
+\caption{A simplified block diagram of the gas flows in the MCPT instrument. A more detailed overview is shown in the detailed piping \& instrumentation diagram (P\&ID) in Fig.~\ref{pnid}. A schema of the cavity containing the reactor assembly is shown in Fig.~\ref{cavity}. A list of the key components of the MCPT instrument is in Table~\ref{inst}}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=1.25\linewidth, trim={7cm 5cm 3cm 5cm}, angle=90]{p+id_3.pdf}\vspace{1em}
+\caption{Detailed piping and instrumentation diagram of the MCPT instrument. The V$_2$O$_5$ label denotes a sample catalyst; a schema of this assembly is shown in Fig.~\ref{cavity}, with connections to the other components pictured in Figs.~\ref{reaccon} and \ref{vna}. \label{pnid}}
+\end{figure}
+
+
+\begin{table}[p]
+\caption{List of key electronic components~\label{inst}}
+\small
+\begin{tabular}{l|l|l|l}
+P\&ID label & P\&ID position & Description & Model \\ \hline
+FC & 4B-5C & Mass flow controllers & Bronkhorst EL-FLOW Prestige $^\dagger$ \\
+PC & 5B & Pressure controller & Bronkhorst EL-PRESS $^\dagger$ \\
+TR & 5C & Temperature controller & Eurotherm 5304, see Figs.~\ref{eurothermA} and~\ref{eurothermB} \\
+-- & 5C & Heater & Serpentine III F017558, see Fig.~\ref{eurothermA} \\
+FI, Alarmbox & 4C & Flow meter & SMC PFM 725, see Fig.~\ref{eurothermA}  \\
+VNA & 4D & Vector network analyser & Agilent PNA-L N5320C, see Fig.~\ref{vna} \\
+GC & 6D & Gas chromatograph & Agilent 7890 GC  $^\ddagger$  \\
+-- & 6B-6C & Vacuum pumps & Pfeiffer HiCube 80 \\
+PI & 6B & Vacuum gauge & Pfeiffer PKR 251 \\
+-- & 6C-6E & Trace heating & Horst HSTD 200W $^*$ \\ \hline
+\end{tabular}
+\vspace{0.5em}
+
+$\dagger:$ Controlled using the LabVIEW interface, via a FlowBus controller (E-7500) and a set of three multiport adapters for a total of 10 devices on a single bus. Note: Only 7 devices shown in Fig.~\ref{pnid}.\\
+
+$\ddagger:$ Equipped with two channels: 1)~Plot-Molesieve (30~m length, 50~$\mu$m film thickness, 0.53~mm I.D.) into Plot-Q (30~m length, 40~$\mu$m film thickness, 0.53~mm I.D.) into a thermal conductivity detector; 2)~FFAP (30~m length, 1~$\mu$m film thickness, 0.53~mm I.D.) into Plot-Q (30~m length, 40~$\mu$m film thickness, 0.53~mm I.D.) into a Polyarc detector (Activated Research Company). Online gas analysis using a 250~$\mu$l sampling loop (Vici Valco, SL250CW) and multi-port valves (Vici Valco, 2$\times$DC6WE, 1$\times$DC10WE).\\
+
+$*:$ Regulators built in-house.
+
+\end{table}
+
+
+\clearpage
+
+\begin{figure}[p]
+\paragraph{Details of the cavities \vspace{1em}}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{cavity_overview.png}
+\caption{A schema of the cavity, glass dewar reactor assembly, coupling loop, and cooling (Peltier) elements. Not to scale. \label{cavity}}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.7\linewidth]{P1120132.JPG}
+\caption{A photo of MCPT cavities of various sizes, made from copper, plated with silver and gold. The disassembled cavity on the right ($h_c = 20$~mm, $r_c = 34$~mm) has been used throughout this work.}
+\end{figure}
+
+\clearpage
+\begin{figure}[p]
+\paragraph{Details of the custom glassware and its connecting hardware \vspace{1em}}
+\begin{center}
+\includegraphics[page=3, width=1.25\linewidth, angle=90]{dewar+reactor.pdf}
+\caption{Complete glassware reactor assembly (Quarzglas Heinrich, Aachen). The dimensions of the reactors are shown in Fig.~\ref{reactor}, while the dewar is shown in Fig.~\ref{dewar}. The whole assembly is inserted into the cavity as indicated in Fig.~\ref{cavity}.}
+\end{center}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[page=2, width=1.35\linewidth, angle=90]{dewar+reactor.pdf}
+\caption{Catalytic reactor, made from Ilmasil PN (Quarzglas Heinrich, Aachen). \label{reactor}}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\includegraphics[page=1, width=1.35\linewidth, angle=90]{dewar.pdf}
+\caption{Heating jacket and vacuum dewar, made from HSQ100 (Quarzglas Heinrich, Aachen). Contains an opening for the air heater as well as a flanged connection for a vacuum pump. \label{dewar}}
+\end{figure}
+
+\begin{figure}[p]
+\begin{center}
+\includegraphics[width=0.8\linewidth]{P1120147.JPG}
+\includegraphics[width=0.8\linewidth]{P1120149.JPG}
+\caption{The connection at the inlet (top) and outlet (bottom) of the reactor, using Swagelok UltraTorr fittings. \label{reaccon}}
+\end{center}
+\end{figure}
+
+\clearpage
+\begin{figure}[p]
+\paragraph{Details of the temperature controller}
+\begin{center}
+\includegraphics[width=1.3\linewidth, angle=90]{6220_Blockschaltbild.pdf}\vspace{1em}
+\caption{Wiring diagram of the temperature controller unit. \label{eurothermA}}
+\end{center}
+\end{figure}
+\clearpage
+
+\clearpage
+\begin{figure}[p]
+\centering
+\includegraphics[width=0.8\linewidth]{6220_front.jpg}
+\includegraphics[width=0.8\linewidth]{6220_back.jpg}
+\caption{Front (top) and rear (bottom) view of the temperature controller unit. \label{eurothermB}}
+\end{figure}
+
+\clearpage
+\begin{figure}[p]
+\paragraph{Transmission line details\vspace{1em}}
+\begin{center}
+\includegraphics[width=0.8\linewidth]{P1120150.JPG}
+\includegraphics[width=0.8\linewidth]{P1120152.JPG}
+\caption{The coaxial transmission line leaving the network analyzer (top) and its connection to the cavity (bottom) via a filter and a coupling loop. \label{vna}}
+\end{center}
+\end{figure}
 
 \end{document}
